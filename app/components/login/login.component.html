@@ -1,0 +1,75 @@
+<div class="container">
+
+    <div class="row">
+        <h1 class="center">Login Form</h1>
+
+        <div class="center" [hidden]="!tryLogin" >
+            <div class="preloader-wrapper big activate">
+                <div class="spinner-layer spinner-blue">
+
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    
+                </div>
+                
+                <div class="circle-clipper right">
+                        <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+        <form
+            [hidden] = "tryLogin || authService.isLoggedIn"
+            novalidate
+            (ngSubmit)="onLogin()" 
+            #loginForm ="ngForm"
+        >
+            <div class="input-field col s6 offset-s3">
+                <label for="username">Username</label>
+                <input 
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                    [(ngModel)]="user.username"
+                    #username = "ngModel"
+                />
+
+                <div [hidden]="username.valid || username.pristine" style="color: firebrick" >
+                    El username es requerido
+                </div>
+                
+            </div>
+
+            <div class="input-field col s6 offset-s3">
+                <label for="password">Password</label>
+                <input 
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    [(ngModel)]="user.password"
+                    #password = "ngModel"
+                />
+
+                <div [hidden]="password.valid || password.pristine" style="color: firebrick" >
+                    El password es requerido
+                </div>
+                
+                 <button 
+                [disabled] = "!loginForm.form.valid"
+                class = "btn waves-efect waves-light input-block-level"
+                type="submit"
+                >
+                    Login
+                </button>
+            </div>   
+        </form> 
+    </div>
+    
+</div>
