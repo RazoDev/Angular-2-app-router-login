@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angular QuickStart Source
 [![Build Status][travis-badge]][travis-badge-url]
 
@@ -167,3 +168,17 @@ Shut it down manually with `Ctrl-C`.
 
 [travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
+=======
+# Angular-2-app-router-login
+app con angular 2.  Formulario de login con acceso admin
+
+
+### Instalacion
+
+```sh
+$ cd ....
+$ git clone https://github.com/RazoDev/Angular-2-app-router-login.git
+$ cd path/carpeta clonada
+$ npm install
+$npm start
+>>>>>>> origin/master
