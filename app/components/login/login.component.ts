@@ -23,11 +23,15 @@ export class LoginComponent  {
   onLogin()
   {
     this.tryLogin = true;
-    this.authService.login().subscribe(() => {
+    this.authService.login(this.user['username']).subscribe(() => {
       if(this.authService.login)
       {
         this.tryLogin = false;
+        if(this.authService.isAdmin)
+            this.router.navigate(['/administration']);
+        else
         this.router.navigate(['/profile']);
+
       }
     })
   }

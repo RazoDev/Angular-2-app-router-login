@@ -16,6 +16,14 @@ import { AuthGuard } from './authentication/auth.guard';
 
 import { FormsModule } from '@angular/forms';
 
+import { AdminComponent } from './components/administration/admin/admin.component';
+import { HomeAdminComponent } from './components/administration/home/home-admin.component';
+import { MessagesAdminComponent } from './components/administration/messages/messages.component';
+import { NotesAdminComponent } from './components/administration/notes/notes.component';
+import { NotesAdminDetailComponent } from './components/administration/notes/notes-admin-detail.component';
+
+import { ApiService } from './services/api.service';
+
 @NgModule({
   imports:      [ BrowserModule, routing, FormsModule ],
   declarations: [
@@ -25,9 +33,14 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    HomeAdminComponent,
+    MessagesAdminComponent,
+    NotesAdminComponent,
+    NotesAdminDetailComponent
     ],
   bootstrap:    [ AppComponent ],
-  providers:[ AuthService, AuthGuard ]
+  providers:[ AuthService, AuthGuard, ApiService ]
 })
 export class AppModule { }
