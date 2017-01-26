@@ -12,3 +12,12 @@ $ cd path/carpeta clonada
 $ npm install
 $npm start
 
+
+
+```sh
+Para entrar a la parte de administrador poner como usario:` admin` y en password `pulsa cualquier tecla` 
+```
+
+```sh
+Para entrar como usario normal :`cualquier nombre` y en password `Cualquier contraseña` 
+```
