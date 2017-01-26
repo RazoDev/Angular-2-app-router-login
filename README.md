@@ -11,7 +11,7 @@ $ git clone https://github.com/RazoDev/Angular-2-app-router-login.git
 $ cd path/carpeta clonada
 $ npm install
 $npm start
-
+```
 
 
 ```sh
